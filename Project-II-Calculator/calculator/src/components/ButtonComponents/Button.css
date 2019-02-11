@@ -1,23 +1,23 @@
 .numbers {
-    height: 16%;
-    width: 25%;
-    background: white;
-    color: black;
-    font-size: 40px;
+  height: 16%;
+  width: 25%;
+  background: white;
+  color: black;
+  font-size: 40px;
 }
 
 .operators {
-    height: 16%;
-    width: 25%;
-    background: #B31329;
-    color: white;
-    font-size: 40px;
+  height: 16%;
+  width: 25%;
+  background: #b31329;
+  color: white;
+  font-size: 40px;
 }
 
 .action-button {
-    height: 16%;
-    width: 75%;
-    background: white;
-    color: black;
-    font-size: 40px;
+  height: 16%;
+  width: 75%;
+  background: white;
+  color: black;
+  font-size: 40px;
 }
