@@ -8,8 +8,10 @@ export default function HeaderContainer() {
     return (
         <div className="App">
             <ImageThumbnail />
-            <HeaderTitle />
-            <HeaderContent />
+            <div className="header-text">
+             <HeaderTitle />
+             <HeaderContent />
+            </div>
         </div>
     )
   }

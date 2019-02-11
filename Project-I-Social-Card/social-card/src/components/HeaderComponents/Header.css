@@ -1,1 +1,26 @@
 /* All styles for your header Components live here */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    display: flex;
+}
+
+.header-title {
+    display: flex;
+    align-items: baseline;
+    padding: 1%;
+}
+
+span {
+    color: grey;
+    padding: 0% 0.5%;
+    font-size: 18px;
+}
+
+p {
+    padding: 1%;
+}
