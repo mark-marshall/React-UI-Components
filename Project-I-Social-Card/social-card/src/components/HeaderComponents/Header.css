@@ -15,12 +15,35 @@
   padding: 1%;
 }
 
+.main-heading {
+  padding-right: 2%;
+}
+
 span {
   color: grey;
   font-size: 16px;
+  padding-right: 1%;
 }
 
 p {
   padding: 1%;
   line-height: 1.6;
+  padding-bottom: 2.5%;
+}
+
+.img-thumbnail-container {
+  width: 325px;
+  height: 100px;
+  position: relative;
+}
+
+.img-thumbnail {
+  height:67%;
+  width: 45%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
