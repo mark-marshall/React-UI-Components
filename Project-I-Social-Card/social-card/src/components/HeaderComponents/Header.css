@@ -1,25 +1,25 @@
 /* All styles for your header Components live here */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .App {
-    display: flex;
+  display: flex;
 }
 
 .header-title {
-    display: flex;
-    align-items: baseline;
-    padding: 1%;
+  display: flex;
+  align-items: baseline;
+  padding: 1%;
 }
 
 span {
-    color: grey;
-    font-size: 16px;
+  color: grey;
+  font-size: 16px;
 }
 
 p {
-    padding: 1%;
+  padding: 1%;
 }

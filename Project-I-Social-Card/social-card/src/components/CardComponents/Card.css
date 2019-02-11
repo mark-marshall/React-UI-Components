@@ -1,6 +1,6 @@
 /* All styles for your Card Components live here */
 .react-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-container {
@@ -22,19 +22,18 @@
 }
 
 .card-content {
-    padding: 2%;
+  padding: 2%;
 }
 
 .card-header {
- font-size: 20px;
- padding-left: 1%;
+  font-size: 20px;
+  padding-left: 1%;
 }
 
 .content-intro {
-    padding-top: 2%;
+  padding-top: 2%;
 }
 
 .site-link {
-    color: grey;
-
+  color: grey;
 }
