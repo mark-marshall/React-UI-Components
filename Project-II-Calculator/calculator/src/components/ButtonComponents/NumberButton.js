@@ -1,9 +1,9 @@
 import React from 'react';
 import './Button.css';
 
-export default function NumberButton({ num }) {
+export default function NumberButton({ props }) {
     return (
-        <button></button>
+        <button className={props.buttonStyle}>{props.text}</button>
     );
   }
   

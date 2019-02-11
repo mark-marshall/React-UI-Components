@@ -1,0 +1,15 @@
+.numbers {
+    height: 16%;
+    width: 25%;
+    background: lightgrey;
+    color: black;
+    font-size: 40px;
+}
+
+.operators {
+    height: 16%;
+    width: 25%;
+    background: #B31329;
+    color: white;
+    font-size: 40px;
+}
