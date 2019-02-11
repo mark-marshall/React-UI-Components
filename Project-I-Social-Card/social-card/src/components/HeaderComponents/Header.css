@@ -18,12 +18,11 @@
 .main-heading {
   padding-right: 2%;
   font-size: 30px;
-  width: 40%;
+  width: 38%;
 }
 
 .main-heading-items {
   color: grey;
-
 }
 
 p {
@@ -39,7 +38,7 @@ p {
 }
 
 .img-thumbnail {
-  height:67%;
+  height: 67%;
   width: 45%;
   position: absolute;
   margin: auto;
