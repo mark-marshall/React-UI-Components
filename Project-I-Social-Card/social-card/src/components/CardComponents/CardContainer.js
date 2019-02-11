@@ -5,7 +5,7 @@ import CardContent from './CardContent';
 
 export default function CardContainer() {
     return (
-        <a href="https://www.reactjs.org" >
+        <a className= "react-link" href="https://www.reactjs.org">
         <div className="card-container">
         <CardBanner />
         <CardContent />
