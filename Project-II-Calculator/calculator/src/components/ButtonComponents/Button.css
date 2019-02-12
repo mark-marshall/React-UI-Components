@@ -1,3 +1,7 @@
+* {
+  cursor: pointer;
+}
+
 .numbers {
   height: 16%;
   width: 25%;
@@ -15,6 +19,14 @@
 }
 
 .action-button {
+  height: 16%;
+  width: 75%;
+  background: white;
+  color: black;
+  font-size: 40px;
+}
+
+.zero {
   height: 16%;
   width: 75%;
   background: white;

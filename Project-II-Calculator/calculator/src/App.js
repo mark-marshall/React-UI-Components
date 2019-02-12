@@ -6,34 +6,87 @@ import ActionButton from './components/ButtonComponents/ActionButton';
 
 class App extends React.Component {
   constructor() {
-    super()
-    this.state={
-
-    }
+    super();
+    this.state = {
+      total: 0
+    };
+    this.buttonPress = this.buttonPress.bind(this);
+    this.clearAll = this.clearAll.bind(this);
   }
+
+  buttonPress = num => {
+    if (this.state.total === 0) {
+      this.setState({ total: num });
+    } else {
+      this.setState({ total: this.state.total + num });
+    }
+  };
+
+  clearAll = () => this.setState({ total: 0 });
+
   render() {
     return (
       <div className="calc-container">
-      <CalculatorDisplay />
-      <ActionButton props={{ text: 'clear' }} />
-      <NumberButton props={{ text: '÷', buttonStyle: 'operators' }} />
-      <NumberButton props={{ text: '7', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '8', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '9', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: 'x', buttonStyle: 'operators' }} />
-      <NumberButton props={{ text: '4', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '5', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '6', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '-', buttonStyle: 'operators' }} />
-      <NumberButton props={{ text: '1', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '2', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '3', buttonStyle: 'numbers' }} />
-      <NumberButton props={{ text: '+', buttonStyle: 'operators' }} />
-      <ActionButton props={{ text: '0' }} />
-      <NumberButton props={{ text: '=', buttonStyle: 'operators' }} />
-    </div>
-    )
+        <CalculatorDisplay num={this.state.total} />
+        <ActionButton clearAll={this.clearAll} text="clear" />
+        <NumberButton text="÷" buttonStyle="operators" />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="7"
+          buttonStyle="numbers"
+        />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="8"
+          buttonStyle="numbers"
+        />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="9"
+          buttonStyle="numbers"
+        />
+        <NumberButton text="x" buttonStyle="operators" />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="4"
+          buttonStyle="numbers"
+        />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="5"
+          buttonStyle="numbers"
+        />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="6"
+          buttonStyle="numbers"
+        />
+        <NumberButton text="-" buttonStyle="operators" />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="1"
+          buttonStyle="numbers"
+        />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="2"
+          buttonStyle="numbers"
+        />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="3"
+          buttonStyle="numbers"
+        />
+        <NumberButton text="+" buttonStyle="operators" />
+        <NumberButton
+          buttonPress={this.buttonPress}
+          text="0"
+          buttonStyle="zero"
+        />
+        <NumberButton text="=" buttonStyle="operators" />
+      </div>
+    );
   }
-};
+}
 
 export default App;
