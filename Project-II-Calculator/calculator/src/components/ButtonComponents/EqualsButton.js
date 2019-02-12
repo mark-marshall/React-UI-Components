@@ -3,6 +3,8 @@ import './Button.css';
 
 export default function EqualsButton(props) {
   return (
-  <button onClick={() => props.equalsPress()} className={props.buttonStyle}>=</button>
+    <button onClick={() => props.equalsPress()} className={props.buttonStyle}>
+      =
+    </button>
   );
 }

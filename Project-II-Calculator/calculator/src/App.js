@@ -14,7 +14,7 @@ class App extends React.Component {
       display: 0,
       currentOperator: '',
       previousNumber: 0,
-      calculationTime: false,
+      calculationTime: false
     };
     this.buttonPress = this.buttonPress.bind(this);
     this.clearAll = this.clearAll.bind(this);
@@ -22,43 +22,56 @@ class App extends React.Component {
     this.equalsPress = this.equalsPress.bind(this);
   }
 
-    /*buttonPress = num => {
-  if (num !==0 && this.state.total === 0) {
+  buttonPress = num => {
+    if (num !== 0 && this.state.total === 0) {
       this.setState({ total: num, display: num });
-    } 
-    
-    if (this.state.display!== 'x') {this.setState({ total: (this.state.total *10 + num), display: (this.state.total *10 + num)})}
-    else {
-      this.setState({ calculationTime: true, total: 0, display: num });
+    } else {
+      this.setState({
+        total: this.state.total * 10 + num,
+        display: this.state.total * 10 + num
+      });
     }
   };
-  */
-
-
-buttonPress = num => {
-  if (num !==0 && this.state.total === 0){
-    this.setState({ total: num, display: num })
-  }
-  else {
-    this.setState({ total: this.state.total *10 + num, display: this.state.total *10 + num });
-  }
-}
-
 
   clearAll = () => this.setState({ total: 0, display: 0 });
 
   operatorPress = operator => {
-    this.setState({ currentOperator: operator, previousNumber: this.state.total, calculationTime: true, display: operator, total: 0 })
+    this.setState({
+      currentOperator: operator,
+      previousNumber: this.state.total,
+      calculationTime: true,
+      display: operator,
+      total: 0
+    });
     console.log(operator);
   };
 
   equalsPress = () => {
-    if(this.state.currentOperator === '+'){this.setState({ total: this.state.total + this.state.previousNumber, display: this.state.total + this.state.previousNumber })};
-    if(this.state.currentOperator === '-'){this.setState({ total: (this.state.total - this.state.previousNumber)*-1, display: (this.state.total - this.state.previousNumber)*-1 })};
-    if(this.state.currentOperator === 'x'){this.setState({ total: this.state.total * this.state.previousNumber, display: this.state.total * this.state.previousNumber })};
-    if(this.state.currentOperator === '÷'){this.setState({ total: (this.state.total / this.state.previousNumber)*-1, display: (this.state.total / this.state.previousNumber)*-1 })};
-
-  }
+    if (this.state.currentOperator === '+') {
+      this.setState({
+        total: this.state.total + this.state.previousNumber,
+        display: this.state.total + this.state.previousNumber
+      });
+    }
+    if (this.state.currentOperator === '-') {
+      this.setState({
+        total: (this.state.total - this.state.previousNumber) * -1,
+        display: (this.state.total - this.state.previousNumber) * -1
+      });
+    }
+    if (this.state.currentOperator === 'x') {
+      this.setState({
+        total: this.state.total * this.state.previousNumber,
+        display: this.state.total * this.state.previousNumber
+      });
+    }
+    if (this.state.currentOperator === '÷') {
+      this.setState({
+        total: (this.state.total / this.state.previousNumber) * -1,
+        display: (this.state.total / this.state.previousNumber) * -1
+      });
+    }
+  };
 
   render() {
     console.log(this);
@@ -66,7 +79,11 @@ buttonPress = num => {
       <div className="calc-container">
         <CalculatorDisplay num={this.state.display} />
         <ActionButton clearAll={this.clearAll} text="clear" />
-        <OperatorButton operatorPress={this.operatorPress} text="÷" buttonStyle="operators" />
+        <OperatorButton
+          operatorPress={this.operatorPress}
+          text="÷"
+          buttonStyle="operators"
+        />
         <NumberButton
           buttonPress={this.buttonPress}
           text={7}
@@ -82,7 +99,11 @@ buttonPress = num => {
           text={9}
           buttonStyle="numbers"
         />
-        <OperatorButton operatorPress={this.operatorPress} text="x" buttonStyle="operators" />
+        <OperatorButton
+          operatorPress={this.operatorPress}
+          text="x"
+          buttonStyle="operators"
+        />
         <NumberButton
           buttonPress={this.buttonPress}
           text={4}
@@ -98,7 +119,11 @@ buttonPress = num => {
           text={6}
           buttonStyle="numbers"
         />
-        <OperatorButton operatorPress={this.operatorPress} text="-" buttonStyle="operators" />
+        <OperatorButton
+          operatorPress={this.operatorPress}
+          text="-"
+          buttonStyle="operators"
+        />
         <NumberButton
           buttonPress={this.buttonPress}
           text={1}
@@ -114,13 +139,21 @@ buttonPress = num => {
           text={3}
           buttonStyle="numbers"
         />
-        <OperatorButton operatorPress={this.operatorPress} text="+" buttonStyle="operators" />
+        <OperatorButton
+          operatorPress={this.operatorPress}
+          text="+"
+          buttonStyle="operators"
+        />
         <NumberButton
           buttonPress={this.buttonPress}
           text={0}
           buttonStyle="zero"
         />
-        <EqualsButton equalsPress={this.equalsPress} text="=" buttonStyle="operators" />
+        <EqualsButton
+          equalsPress={this.equalsPress}
+          text="="
+          buttonStyle="operators"
+        />
       </div>
     );
   }
