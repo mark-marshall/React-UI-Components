@@ -49,32 +49,31 @@ class App extends React.Component {
   equalsPress = () => {
     if (this.state.currentOperator === '+') {
       this.setState({
-        total: this.state.total + this.state.previousNumber,
-        display: this.state.total + this.state.previousNumber
+        total: this.state.previousNumber + this.state.total,
+        display: this.state.previousNumber + this.state.total
       });
     }
     if (this.state.currentOperator === '-') {
       this.setState({
-        total: (this.state.total - this.state.previousNumber) * -1,
-        display: (this.state.total - this.state.previousNumber) * -1
+        total: this.state.previousNumber - this.state.total,
+        display: this.state.previousNumber - this.state.total
       });
     }
     if (this.state.currentOperator === 'x') {
       this.setState({
-        total: this.state.total * this.state.previousNumber,
-        display: this.state.total * this.state.previousNumber
+        total: this.state.previousNumber * this.state.total,
+        display: this.state.previousNumber * this.state.total
       });
     }
     if (this.state.currentOperator === '÷') {
       this.setState({
-        total: (this.state.total / this.state.previousNumber) * -1,
-        display: (this.state.total / this.state.previousNumber) * -1
+        total: this.state.previousNumber / this.state.total,
+        display: this.state.previousNumber / this.state.total
       });
     }
   };
 
   render() {
-    console.log(this);
     return (
       <div className="calc-container">
         <CalculatorDisplay num={this.state.display} />
