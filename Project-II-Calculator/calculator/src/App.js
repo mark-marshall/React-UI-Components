@@ -4,9 +4,16 @@ import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay'
 import NumberButton from './components/ButtonComponents/NumberButton';
 import ActionButton from './components/ButtonComponents/ActionButton';
 
-const App = () => {
-  return (
-    <div className="calc-container">
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state={
+
+    }
+  }
+  render() {
+    return (
+      <div className="calc-container">
       <CalculatorDisplay />
       <ActionButton props={{ text: 'clear' }} />
       <NumberButton props={{ text: '÷', buttonStyle: 'operators' }} />
@@ -25,7 +32,8 @@ const App = () => {
       <ActionButton props={{ text: '0' }} />
       <NumberButton props={{ text: '=', buttonStyle: 'operators' }} />
     </div>
-  );
+    )
+  }
 };
 
 export default App;
