@@ -53,7 +53,11 @@ buttonPress = num => {
   };
 
   equalsPress = () => {
-    
+    if(this.state.currentOperator === '+'){this.setState({ total: this.state.total + this.state.previousNumber, display: this.state.total + this.state.previousNumber })};
+    if(this.state.currentOperator === '-'){this.setState({ total: this.state.total - this.state.previousNumber, display: this.state.total - this.state.previousNumber })};
+    if(this.state.currentOperator === 'x'){this.setState({ total: this.state.total * this.state.previousNumber, display: this.state.total * this.state.previousNumber })};
+    if(this.state.currentOperator === '÷'){this.setState({ total: this.state.total / this.state.previousNumber, display: this.state.total / this.state.previousNumber })};
+
   }
 
   render() {
