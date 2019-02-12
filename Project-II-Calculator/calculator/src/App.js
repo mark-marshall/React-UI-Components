@@ -43,7 +43,6 @@ class App extends React.Component {
       display: operator,
       total: 0
     });
-    console.log(operator);
   };
 
   equalsPress = () => {
