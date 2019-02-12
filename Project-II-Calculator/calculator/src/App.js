@@ -3,23 +3,34 @@ import './App.css';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay';
 import NumberButton from './components/ButtonComponents/NumberButton';
 import ActionButton from './components/ButtonComponents/ActionButton';
+import ZeroButton from './components/ButtonComponents/ZeroButton';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      total: 0
+      total: 0,
+      currentOperator: '',
     };
     this.buttonPress = this.buttonPress.bind(this);
     this.clearAll = this.clearAll.bind(this);
+    this.zeroPress = this.zeroPress.bind(this);
   }
 
   buttonPress = num => {
+
     if (this.state.total === 0) {
       this.setState({ total: num });
     } else {
       this.setState({ total: this.state.total + num });
     }
+  };
+
+  zeroPress = () => {
+    if(this.state.total !== 0) {
+      this.setState({ total: this.state.total + 0})
+    }
+
   };
 
   clearAll = () => this.setState({ total: 0 });
@@ -78,9 +89,8 @@ class App extends React.Component {
           buttonStyle="numbers"
         />
         <NumberButton text="+" buttonStyle="operators" />
-        <NumberButton
-          buttonPress={this.buttonPress}
-          text="0"
+        <ZeroButton
+          zeroPress={this.zeroPress}
           buttonStyle="zero"
         />
         <NumberButton text="=" buttonStyle="operators" />
