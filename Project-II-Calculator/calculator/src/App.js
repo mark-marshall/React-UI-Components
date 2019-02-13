@@ -14,7 +14,6 @@ class App extends React.Component {
       display: 0,
       currentOperator: '',
       previousNumber: 0,
-      calculationTime: false
     };
     this.buttonPress = this.buttonPress.bind(this);
     this.clearAll = this.clearAll.bind(this);
@@ -39,7 +38,6 @@ class App extends React.Component {
     this.setState({
       currentOperator: operator,
       previousNumber: this.state.total,
-      calculationTime: true,
       display: operator,
       total: 0
     });
